@@ -1,0 +1,39 @@
+// write a program to remove the vowel
+//algorithm
+//compare the element if it is true just go in for loop shift all element left by once
+//decrese the len   and main important thing is you need to reduce the again check the occupied character
+// hence decrease the i value also
+// finally don't forget to add '\0' every element decrition
+
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char name[40];
+    
+    scanf(" %s",name);
+    int len=strlen(name);
+    
+    //printf("%d",len);
+    
+    for(int i=0;i<len;i++)
+    {
+        
+        //here you add all element you want
+        if(name[i]=='a'){
+            for(int j=i;j<len;j++){
+                
+                name[j]=name[j+1];
+                
+                
+            }
+            len--;
+        i--;
+        }
+        
+        name[len+1]='\0';
+    }
+    
+    printf(" %s",name);
+}
